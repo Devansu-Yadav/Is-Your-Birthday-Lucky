@@ -4,9 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucky Birthday checker</title>
+    <title>Lucky Birthday Checker</title>
+    <link rel="stylesheet" href="./src/css/style.css">
 </head>
 <body>
-    
+    <h1>Is Your Birthday Lucky?</h1>
+    <div class="container">
+        <p>Enter your Birthday and Lucky Number to continue ...</p>
+        <label for="date-of-birth">Select your Birth Date:</label>
+        <input id="date-of-birth" type="date" />
+
+        <label for="lucky-number">Enter your Lucky Number:</label>
+        <input id="lucky-number" type="number" />
+
+        <button id="check-btn">check</button>
+
+        <div class="output"></div>
+        <div class="privacy-notice">
+            <p id="privacy-note">P.S: We are not storing your data</p>
+        </div>
+
+        <div class="social-media">
+            My Social Media Icons as Footer
+        </div>
+    </div>
+    <script type="text/javascript" src="src/js/index.js"></script>
 </body>
 </html>
