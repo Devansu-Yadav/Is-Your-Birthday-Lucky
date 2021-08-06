@@ -1,13 +1,15 @@
 const dateOfBirth = document.querySelector("#date-of-birth");
 const luckyNumber = document.querySelector("#lucky-number");
 const checkButton = document.querySelector("#check-btn");
-const output = document.querySelector(".output");
+const outputClass = document.querySelector(".output");
+const output = document.querySelector(".output #output");
+const outputImg = document.querySelector(".output #output-img");
 
 function checkForBirthdayAndLuckyNumber() {
     const dob = dateOfBirth.value;
 
     if(dob ==="" && luckyNumber.value === "") {
-        output.innerText = "You did not enter Birthdate or Lucky Number!!";
+        displayOutput("You did not enter Birthdate or Lucky Number!!");
     } else {
         const sum = calculateSumOfBirthDate(dob);
         compareValues(sum, luckyNumber.value);
@@ -26,10 +28,22 @@ function calculateSumOfBirthDate(dob) {
 
 function compareValues(sum, luckyNumber) {
     if(sum % Number(luckyNumber) == 0) {
-        output.innerText = "Your Birthday is lucky!!🎉🎊";
+        displayOutput("Your Birthday is lucky!!🎉🎊");
+        displayImage("../assets/lucky.gif");
     } else {
-        output.innerText = "You create your own luck!💪😤";
+        displayOutput("You create your own luck!💪😤");
+        displayImage("../assets/luck.gif");
     }
+}
+
+function displayImage(img) {
+    outputImg.style.display = "block";
+    outputImg.src = img;
+}
+
+function displayOutput(msg) {
+    outputClass.style.display = "block";
+    output.innerText = msg;
 }
 
 checkButton.addEventListener("click", checkForBirthdayAndLuckyNumber);

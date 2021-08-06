@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
+:root {
+    --primary-color: rgb(0,255,255,0.6);
+    --secondary-color: black;
+    --btn-text-color: white;
+    --privacy-notice: #FF0000;
+    --box-shadow: #888;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -7,4 +15,123 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 550px;
+    min-height: 200px;
+    padding: 1rem 0rem;
+    margin: 0rem auto;
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
+.container #app-heading {
+    padding: 2rem 0rem;
+}
+
+.container #description {
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding-bottom: 1.5rem;
+}
+
+.container label {
+    font-size: 1.3rem;
+}
+
+.container input {
+    width: 40%;
+    height: 40px;
+    padding: 1rem;
+    display: block;
+    box-sizing: border-box;
+    margin: 1rem auto;
+} 
+
+.container #check-btn {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    color: var(--btn-text-color);
+    border-radius: 1.5rem;
+}
+
+.container #check-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.container .output {
+    margin: 1rem 0rem;
+    font-size: 1.4rem;
+    padding: 1rem 0rem;
+}
+
+.output #output-img {
+    margin: 1rem auto;
+    width: 300px;
+    height: auto;
+}
+
+.container .privacy-notice {
+    margin: 1rem auto;
+    padding: 1rem 0rem;
+    width: 75%;
+    font-size: 1.2rem;
+    color: var(--privacy-notice);
+    box-shadow: 0px 0px 10px 2px var(--box-shadow);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0.5rem 0rem;
+    text-align: center;
+    width: 75%;
+    margin: 1.5rem auto 0rem auto;
+    box-shadow: 0px 0px 10px 2px var(--box-shadow);
+}
+
+.footer .footer-content {
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
+
+.footer-content .other-page-social-media {
+    padding: 0rem 1rem;
+    margin: 0.5rem 0rem;
+}
+
+.footer-content #other-page-footer-para {
+    font-size: 1.2rem;
+    margin: 0.5rem 1rem;
+}
+
+.footer-content .other-page-social-list-inline {
+    display: inline-block;
+    text-align: center;
+    padding: 0rem 0.3rem;
+}
+
+.footer-content .other-page-social-list-inline .icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    display: table-cell;
+    vertical-align: middle;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.footer-content .other-page-social-list-inline .social-link {
+    text-decoration: none;
+}
+
+.footer-content .other-page-social-list-inline .icon ion-icon {
+    font-size: 1.6rem;
 }
