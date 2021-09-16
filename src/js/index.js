@@ -12,7 +12,11 @@ function checkForBirthdayAndLuckyNumber() {
         displayOutput("You did not enter Birthdate or Lucky Number!!");
     } else {
         const sum = calculateSumOfBirthDate(dob);
-        compareValues(sum, luckyNumber.value);
+        if(Number(luckyNumber.value) > 0) {
+            compareValues(sum, luckyNumber.value);
+        } else {
+            displayOutput("Lucky Number cannot be negative!!");
+        }
     }
 }
 
